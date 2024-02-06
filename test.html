@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .empty{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            position: relative;
+            overflow: hidden;
+        }
+        .empty::before{
+            content: "";
+            display: block;
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            background-color: blue;
+            border-radius: 50%;
+            top:0px;
+            right: 0px;
+            box-shadow: 50px -50px 0 0 rgb(200, 241, 105);
+        }
+        .container{
+            padding: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="empty"></div>
+    </div>
+</body>
+</html>
